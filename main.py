@@ -17,7 +17,7 @@ def main():
     automl = AutoML(args.model_dir)
 
     log('####### cur time = ' + str(datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")))
-    #
+    # path_pred
     automl.config['path_pred'] = args.model_dir
     
     if args.train_csv is not None:
@@ -30,7 +30,7 @@ def main():
         automl.predict(args.test_csv, args.prediction_csv)
     else:
         exit(1)
-        
+    # end
     log('####### cur time = ' + str(datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")))
 
 
